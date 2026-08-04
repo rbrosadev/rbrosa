@@ -1,0 +1,33 @@
+{
+	"$schema": "https://motion-core.dev/registry/schema/config-schema.json",
+	"tailwind": {
+		"css": "src\\layout.css"
+	},
+	"aliases": {
+		"components": {
+			"filesystem": "src/lib/components",
+			"import": "$lib/components"
+		},
+		"helpers": {
+			"filesystem": "src/lib/hooks",
+			"import": "$lib/hooks"
+		},
+		"utils": {
+			"filesystem": "src/lib",
+			"import": "$lib"
+		},
+		"assets": {
+			"filesystem": "src/lib/assets",
+			"import": "$lib/assets"
+		}
+	},
+	"aliasPrefixes": {
+		"components": "$lib/components"
+	},
+	"exports": {
+		"components": {
+			"barrel": "src/lib/components/index.ts",
+			"strategy": "named"
+		}
+	}
+}
