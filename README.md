@@ -13,7 +13,6 @@ A aplicação foi construída utilizando tecnologias modernas do ecossistema Sve
 - [TypeScript](https://www.typescriptlang.org/) — Adiciona tipagem ao projeto, tornando o código mais seguro e previsível.
 - [Tailwind CSS](https://tailwindcss.com/) — Sistema de estilização utilizado para criar layouts responsivos.
 - [shadcn-svelte](https://www.shadcn-svelte.com/) — Biblioteca de componentes reutilizáveis para Svelte.
-- [Motion Core](https://motion-core.dev/) — Ferramentas e componentes para criação de animações e interações.
 - [GSAP](https://gsap.com/) — Biblioteca utilizada para animações avançadas.
 - [Vite](https://vite.dev/) — Ferramenta responsável pelo ambiente de desenvolvimento e build.
 - [Vitest](https://vitest.dev/) — Utilizado para testes automatizados.
@@ -102,7 +101,6 @@ src/
 │   ├── components/      # Componentes reutilizáveis da interface
 │   │   ├── layout/      # Componentes de estrutura da página
 │   │   └── ui/          # Componentes básicos de interface
-│   ├── hooks/           # Lógicas reutilizáveis relacionadas ao Svelte
 │   ├── services/        # Integrações e serviços externos
 │   ├── stores/          # Estados compartilhados da aplicação
 │   └── utils.ts         # Funções auxiliares

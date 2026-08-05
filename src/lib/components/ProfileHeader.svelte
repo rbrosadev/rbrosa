@@ -1,6 +1,5 @@
 <script lang="ts">
 	import * as Avatar from '$lib/components/ui/avatar';
-	import { SplitHover } from '$lib/components/ui/split-hover';
 	import cursor from '$lib/assets/cursor.cur';
 	import { discord } from '$lib/stores/discord';
 </script>
@@ -42,9 +41,7 @@
 	</Avatar.Root>
 
 	<div class="w-full max-w-md">
-		<h1 class="font-serif text-xl leading-tight sm:text-2xl">
-			<SplitHover>Oi, eu sou o Ribeiro!</SplitHover>
-		</h1>
+		<h1 class="font-serif text-xl leading-tight sm:text-2xl">Oi, eu sou o Ribeiro!</h1>
 		<p class="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
 			Gosto de tecnologia, programação e de criar coisas novas para a web.
 		</p>
