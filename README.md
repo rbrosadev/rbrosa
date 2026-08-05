@@ -13,7 +13,6 @@ A aplicação foi construída utilizando tecnologias modernas do ecossistema Sve
 - [TypeScript](https://www.typescriptlang.org/) — Adiciona tipagem ao projeto, tornando o código mais seguro e previsível.
 - [Tailwind CSS](https://tailwindcss.com/) — Sistema de estilização utilizado para criar layouts responsivos.
 - [shadcn-svelte](https://www.shadcn-svelte.com/) — Biblioteca de componentes reutilizáveis para Svelte.
-- [GSAP](https://gsap.com/) — Biblioteca utilizada para animações avançadas.
 - [Vite](https://vite.dev/) — Ferramenta responsável pelo ambiente de desenvolvimento e build.
 - [Vitest](https://vitest.dev/) — Utilizado para testes automatizados.
 - [ESLint](https://eslint.org/) e [Prettier](https://prettier.io/) — Ferramentas para manter o código organizado e padronizado.

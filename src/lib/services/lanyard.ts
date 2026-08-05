@@ -17,27 +17,57 @@ type LanyardData = {
 	activities: LanyardActivity[];
 
 	spotify?: {
+		timestamps?: {
+			start: number;
+			end: number;
+		};
+
 		song: string;
+
 		artist: string;
+
 		album: string;
+
 		album_art_url: string;
+
+		track_id: string;
 	};
 };
 
 export type LanyardActivity = {
 	name: string;
+
 	type: number;
 
+	application_id?: string;
+
 	details?: string;
+
 	state?: string;
+
+	timestamps?: {
+		start?: number;
+
+		end?: number;
+	};
 
 	assets?: {
 		large_image?: string;
+
 		large_text?: string;
 
 		small_image?: string;
+
 		small_text?: string;
 	};
+
+	party?: {
+		id?: string;
+
+		size?: [number, number];
+	};
+
+	buttons?: string[];
 };
 
 export type DiscordPresence = {
@@ -55,9 +85,18 @@ export type DiscordPresence = {
 
 	spotify?: {
 		song: string;
+
 		artist: string;
+
 		album: string;
+
 		image: string;
+
+		start: number;
+
+		end: number;
+
+		trackId: string;
 	};
 
 	listeningToSpotify: boolean;
@@ -78,6 +117,7 @@ export function connectLanyard(userId: string, callback: (data: DiscordPresence)
 		socket?.send(
 			JSON.stringify({
 				op: 2,
+
 				d: {
 					subscribe_to_id: userId
 				}
@@ -129,9 +169,18 @@ function parsePresence(data: LanyardData): DiscordPresence {
 		spotify: data.spotify
 			? {
 					song: data.spotify.song,
+
 					artist: data.spotify.artist,
+
 					album: data.spotify.album,
-					image: data.spotify.album_art_url
+
+					image: data.spotify.album_art_url,
+
+					start: data.spotify.timestamps?.start ?? Date.now(),
+
+					end: data.spotify.timestamps?.end ?? Date.now(),
+
+					trackId: data.spotify.track_id
 				}
 			: undefined
 	};
