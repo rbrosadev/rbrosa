@@ -156,14 +156,15 @@
 					{/if}
 				</div>
 			</div>
-			{:else if coverImage}
-				<div
-					class="absolute top-2 right-2 z-20 size-14 overflow-hidden rounded-xl border border-black/10 bg-black/85 p-2 shadow-md sm:size-16 md:size-20"
-					in:fade={{ duration: 300 }}
-					out:fade={{ duration: 200 }}
-				>
-					<img src={coverImage} alt={activityName} class="size-full rounded-lg object-contain" />
-				</div>
-			{/if}
+		{:else if coverImage}
+			<!-- selo pequeno no canto, não briga com o texto -->
+			<div
+				class="absolute top-2 right-2 z-20 size-10 overflow-hidden rounded-xl border border-black/10 bg-black/85 p-1.5 shadow-md sm:size-12 md:size-14"
+				in:fade={{ duration: 300 }}
+				out:fade={{ duration: 200 }}
+			>
+				<img src={coverImage} alt={activityName} class="size-full rounded-lg object-contain" />
+			</div>
+		{/if}
 	</section>
 {/if}
